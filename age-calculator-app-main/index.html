@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Calculate your age effortlessly with the Age Calculator App. Input your birthdate and get accurate results for years, months, and days. Simple, intuitive, and easy-to-use."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script defer src="apps.js"></script>
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="visually-hidden">Age Calculator App</h1>
+    </header>
+
+    <main>
+      <form novalidate id="dateForm">
+        <div class="fields">
+          <div class="form-row">
+            <label for="day">Day</label>
+            <input
+              type="number"
+              id="day"
+              name="day"
+              placeholder="DD"
+              required
+              aria-describedby="error-message-day"
+            />
+            <p
+              aria-live="polite"
+              id="error-message-day"
+              class="error-valid-date error-message-empty error-message-day"
+            ></p>
+          </div>
+
+          <div class="form-row">
+            <label for="month">Month</label>
+            <input
+              type="number"
+              id="month"
+              name="month"
+              placeholder="MM"
+              required
+              aria-describedby="error-message-month"
+            />
+            <p
+              id="error-message-month"
+              aria-live="polite"
+              class="error-message-empty error-message-month"
+            ></p>
+          </div>
+
+          <div class="form-row">
+            <label for="year">Year</label>
+            <input
+              type="number"
+              id="year"
+              name="year"
+              placeholder="YYYY"
+              required
+              aria-describedby="error-message-year"
+            />
+            <p
+              id="error-message-year"
+              aria-live="polite"
+              class="error-message-empty error-message-year"
+            ></p>
+          </div>
+        </div>
+
+        <div class="line"></div>
+        <button type="submit" aria-label="Calculate Age">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            width="46"
+            height="44"
+            viewBox="0 0 46 44"
+          >
+            <g fill="none" stroke="#FFF" stroke-width="2">
+              <path
+                d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+              />
+            </g>
+          </svg>
+        </button>
+      </form>
+
+      <div class="result">
+        <h2><span id="yearsOutput">--</span> years</h2>
+        <h2><span id="monthsOutput">--</span> months</h2>
+        <h2><span id="daysOutput">--</span> days</h2>
+      </div>
+    </main>
+  </body>
+</html>
